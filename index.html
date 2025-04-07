@@ -102,6 +102,42 @@
       z-index: 1000;
     }
 
+    .polaroid {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      width: 320px;
+      margin: 50px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .polaroid-header {
+      background: #444;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px 5px 0 0;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    .polaroid-frame {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .polaroid-frame img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .polaroid-text {
+      padding: 10px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
     footer {
       margin-top: 50px;
       font-size: 0.9em;
@@ -157,6 +193,15 @@
       <p>Semoga kamu selalu bahagia ya!</p>
       <p class="heart">💕</p>
     </div>
+
+    <div class="polaroid">
+      <div class="polaroid-header">POLAROID PHOTO</div>
+      <div class="polaroid-frame">
+        <img src="https://source.unsplash.com/300x400/?couple1" alt="Foto 1" />
+        <div class="polaroid-text">Thank you for letting me truly know and love you.</div>
+        <img src="https://source.unsplash.com/300x400/?couple2" alt="Foto 2" style="margin-top:10px;" />
+      </div>
+    </div>
   </div>
 
   <div class="music-player">
@@ -170,11 +215,5 @@
     Dibuat dengan cinta oleh [Nama Kamu] 💌
   </footer>
 
-  <script>
-    // Tambahan jika ingin ganti src saat hover (JS opsional, tapi di sini kita pakai CSS saja)
-    // document.getElementById('hoverBox').addEventListener('mouseenter', function() {
-    //   document.getElementById('coupleImg').style.opacity = 0;
-    // });
-  </script>
 </body>
 </html>
