@@ -48,15 +48,21 @@
       animation: fadeInUp 1.5s ease;
     }
 
+    .hover-images-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
     .hover-image {
       position: relative;
-      width: 300px;
-      height: 300px;
-      margin: 0 auto;
+      width: 200px;
+      height: 250px;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-      margin-top: 40px;
       animation: fadeInUp 2s ease;
     }
 
@@ -76,7 +82,7 @@
       background: rgba(255, 255, 255, 0.9);
       color: #d63384;
       font-family: 'Shadows Into Light', cursive;
-      font-size: 1.5em;
+      font-size: 1.2em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -108,27 +114,17 @@
 
     .polaroid {
       background: white;
-      width: 220px;
-      padding: 10px;
-      margin-bottom: 20px;
+      padding: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       border-radius: 10px;
     }
 
-    .polaroid .hover-image {
-      width: 200px;
-      height: 250px;
-    }
-
     .music-control {
-      position: fixed;
+      position: absolute;
       top: 10px;
-      left: 10px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 999;
-      background: #fff;
-      padding: 10px 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -184,37 +180,32 @@
       <p>Aku bikinin ini buat kamu, sebagai tanda kecil dari rasa sayangku 🥰</p>
     </div>
 
-    <div class="hover-image">
-      <img src="https://source.unsplash.com/300x300/?couple" alt="Couple Image" />
-      <div class="text">Kita berdua selamanya 💞</div>
-    </div>
-
     <div class="card">
       <p>Semoga kamu selalu bahagia ya!</p>
       <p class="heart">💕</p>
     </div>
 
     <div class="polaroid-stack">
-      <img src="kamera.png" class="camera-img" alt="Camera">
+      <img src="asset/kamera.png" class="camera-img" alt="Camera">
 
       <div class="polaroid">
-        <div class="hover-image">
-          <img src="https://source.unsplash.com/200x250/?love" alt="photo1">
-          <div class="text">Terima kasih telah hadir dalam hidupku ❤️</div>
-        </div>
-      </div>
-
-      <div class="polaroid">
-        <div class="hover-image">
-          <img src="https://source.unsplash.com/200x250/?hug" alt="photo2">
-          <div class="text">Kamu adalah kebahagiaanku setiap hari 🥰</div>
-        </div>
-      </div>
-
-      <div class="polaroid">
-        <div class="hover-image">
-          <img src="https://source.unsplash.com/200x250/?romantic" alt="photo3">
-          <div class="text">Semoga kita selalu bersama ya 💕</div>
+        <div class="hover-images-group">
+          <div class="card">
+          <div class="hover-images-group">
+            <div class="hover-image">
+              <img src="https://source.unsplash.com/200x250/?couple" alt="Couple Image 1" />
+              <div class="text">Kita berdua selamanya 💞</div>
+            </div>
+            <div class="hover-image">
+              <img src="https://source.unsplash.com/200x250/?together" alt="Couple Image 2" />
+              <div class="text">Selalu di sampingmu 💗</div>
+            </div>
+            <div class="hover-image">
+              <img src="https://source.unsplash.com/200x250/?love" alt="Couple Image 3" />
+              <div class="text">Kamu dan aku, selamanya 💑</div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
