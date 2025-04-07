@@ -4,225 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Untuk Kamu 💖</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #ffe0ec, #ffe8f0);
-      color: #333;
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    .container {
-      padding: 50px 20px;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #d63384;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    p {
-      font-size: 1.3em;
-      margin: 10px 0;
-    }
-
-    .heart {
-      color: #ff4d6d;
-      font-size: 2em;
-      animation: beat 1s infinite;
-    }
-
-    .card {
-      background: white;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 500px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1.5s ease;
-    }
-
-    .hover-image {
-      position: relative;
-      width: 300px;
-      height: 300px;
-      margin: 0 auto;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-      margin-top: 40px;
-      animation: fadeInUp 2s ease;
-    }
-
-    .hover-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.5s ease;
-    }
-
-    .hover-image .text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.9);
-      color: #d63384;
-      font-size: 1.5em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .hover-image:hover img {
-      opacity: 0;
-    }
-
-    .hover-image:hover .text {
-      opacity: 1;
-    }
-
-    .music-player {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-
-    .polaroid {
-      background: #f9f9f9;
-      padding: 10px;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-      width: 320px;
-      margin: 50px auto;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .polaroid-header {
-      background: #444;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px 5px 0 0;
-      font-weight: bold;
-      font-size: 0.9em;
-    }
-
-    .polaroid-frame {
-      background: #fff;
-      padding: 15px;
-      border: 1px solid #ddd;
-    }
-
-    .polaroid-frame img {
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    .polaroid-text {
-      padding: 10px;
-      font-size: 0.95em;
-      color: #555;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    @keyframes beat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.3);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Hai, Sayang 💖</h1>
-    <div class="card">
-      <p>Aku cuma mau bilang...</p>
-      <p class="heart">❤️</p>
-      <p>Kamu itu luar biasa. Terima kasih udah jadi bagian dari hidupku.</p>
-      <p>Aku bikinin ini buat kamu, sebagai tanda kecil dari rasa sayangku 🥰</p>
-    </div>
-
-    <div class="hover-image" id="hoverBox">
-      <img src="https://source.unsplash.com/300x300/?couple" alt="Couple Image" id="coupleImg" />
-      <div class="text">Kita berdua selamanya 💞</div>
-    </div>
-
-    <div class="card">
-      <p>Semoga kamu selalu bahagia ya!</p>
-      <p class="heart">💕</p>
-    </div>
-
-    <div class="polaroid">
-      <div class="polaroid-header">POLAROID PHOTO</div>
-      <div class="polaroid-frame">
-        <img src="https://source.unsplash.com/300x400/?couple1" alt="Foto 1" />
-        <div class="polaroid-text">Thank you for letting me truly know and love you.</div>
-        <img src="https://source.unsplash.com/300x400/?couple2" alt="Foto 2" style="margin-top:10px;" />
-      </div>
-    </div>
-  </div>
-
-  <div class="music-player">
-    <audio id="bg-music" autoplay loop>
-      <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
-      Browser kamu tidak mendukung audio player 😢
-    </audio>
-  </div>
-
-  <footer>
-    Dibuat dengan cinta oleh [Nama Kamu] 💌
-  </footer>
-
-</body>
-</html>
-<!-- <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Untuk Kamu 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <style>
     body {
@@ -339,8 +120,15 @@
       height: 250px;
     }
 
-    .music-player {
-      display: none;
+    .music-control {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -379,7 +167,14 @@
     }
   </style>
 </head>
-<body onload="document.getElementById('bg-music').play()">
+<body>
+  <div class="music-control">
+    <audio id="bg-music" controls loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+      Browser kamu tidak mendukung audio player 😢
+    </audio>
+  </div>
+
   <div class="container">
     <h1>Hai, Sayang 💖</h1>
     <div class="card">
@@ -425,16 +220,8 @@
     </div>
   </div>
 
-  <div class="music-player">
-    <audio id="bg-music" autoplay loop>
-      <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
-      Browser kamu tidak mendukung audio player 😢
-    </audio>
-  </div>
-
   <footer>
     Dibuat dengan cinta oleh [Nama Kamu] 💌
   </footer>
 </body>
 </html>
- -->
