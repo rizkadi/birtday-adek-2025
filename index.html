@@ -83,11 +83,23 @@
     }
 
     .hover-image:hover img {
-      opacity: 0.2;
+      opacity: 0;
     }
 
     .hover-image:hover .text {
       opacity: 1;
+    }
+
+    .music-player {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
 
     footer {
@@ -136,9 +148,9 @@
       <p>Aku bikinin ini buat kamu, sebagai tanda kecil dari rasa sayangku 🥰</p>
     </div>
 
-    <div class="hover-image">
-      <img src="https://source.unsplash.com/300x300/?love,heart" alt="Love Image" />
-      <div class="text">Aku sayang kamu 💗</div>
+    <div class="hover-image" id="hoverBox">
+      <img src="https://source.unsplash.com/300x300/?couple" alt="Couple Image" id="coupleImg" />
+      <div class="text">Kita berdua selamanya 💞</div>
     </div>
 
     <div class="card">
@@ -147,8 +159,22 @@
     </div>
   </div>
 
+  <div class="music-player">
+    <audio controls autoplay loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+      Browser kamu tidak mendukung audio player 😢
+    </audio>
+  </div>
+
   <footer>
     Dibuat dengan cinta oleh [Nama Kamu] 💌
   </footer>
+
+  <script>
+    // Tambahan jika ingin ganti src saat hover (JS opsional, tapi di sini kita pakai CSS saja)
+    // document.getElementById('hoverBox').addEventListener('mouseenter', function() {
+    //   document.getElementById('coupleImg').style.opacity = 0;
+    // });
+  </script>
 </body>
 </html>
