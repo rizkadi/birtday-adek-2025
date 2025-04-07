@@ -34,38 +34,44 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 0 16px;
     }
 
     .camera-img {
       width: 250px;
       max-width: 80%;
-      margin-bottom: 20px;
+      margin: 0;
     }
 
     .polaroid-card {
       background: white;
-      padding: 20px;
+      padding: 32px 32px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       border-radius: 5px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       align-items: center;
+      width: 100%;
+      max-width: 400px;
     }
 
     .photo-frame {
-      width: 200px;
-      height: 250px;
       position: relative;
       overflow: hidden;
-      border-radius: 5px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      border: 3px solid #222;
+      border-radius: 6px;
+      padding: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 16px;
+      background: #fff;
     }
 
     .photo-frame img {
+      display: block;
+      height: auto;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       transition: opacity 0.5s ease;
     }
 
@@ -104,6 +110,23 @@
         opacity: 1;
       }
     }
+
+    @media (min-width: 600px) {
+      .polaroid-card {
+        max-width: 500px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .camera-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .polaroid-card {
+        max-width: 500px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -113,8 +136,12 @@
   </div>
 
   <!-- Scroll text -->
-  <div class="scroll-text">Scroll ke bawah ya 💕</div>
-
+  <div class="scroll-text">Scroll ke bawah ya 💕<br>
+    |<br>
+    |<br>
+    v
+  </div>
+  
   <!-- Camera and Polaroid section -->
   <div class="camera-section">
     <img src=asset/kamera.png alt="Kamera Polaroid" class="camera-img" />
