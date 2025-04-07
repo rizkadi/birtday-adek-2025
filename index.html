@@ -16,141 +16,84 @@
       overflow-x: hidden;
     }
 
-    .container {
-      padding: 50px 20px;
+    .spotify-player {
+      margin: 30px auto 10px;
+      display: flex;
+      justify-content: center;
     }
 
-    h1 {
-      font-size: 3em;
+    .scroll-text {
+      margin-top: 10px;
+      font-size: 1.1em;
       color: #d63384;
-      margin-bottom: 20px;
       animation: fadeIn 2s ease-in-out;
     }
 
-    p {
-      font-size: 1.3em;
-      margin: 10px 0;
-    }
-
-    .heart {
-      color: #ff4d6d;
-      font-size: 2em;
-      animation: beat 1s infinite;
-    }
-
-    .card {
-      background: white;
+    .camera-section {
       margin: 40px auto;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 500px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1.5s ease;
-    }
-
-    .hover-images-group {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 40px;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .hover-image {
-      position: relative;
+    .camera-img {
+      width: 250px;
+      max-width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .polaroid-card {
+      background: white;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .photo-frame {
       width: 200px;
       height: 250px;
-      border-radius: 20px;
+      position: relative;
       overflow: hidden;
+      border-radius: 5px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-      animation: fadeInUp 2s ease;
     }
 
-    .hover-image img {
+    .photo-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: opacity 0.5s ease;
     }
 
-    .hover-image .text {
+    .photo-frame .hover-text {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       color: #d63384;
       font-family: 'Shadows Into Light', cursive;
-      font-size: 1.2em;
+      font-size: 1.1em;
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
-      transition: opacity 0.5s ease;
       padding: 10px;
       text-align: center;
+      transition: opacity 0.5s ease;
     }
 
-    .hover-image:hover img {
+    .photo-frame:hover img {
       opacity: 0;
     }
 
-    .hover-image:hover .text {
+    .photo-frame:hover .hover-text {
       opacity: 1;
-    }
-
-    .polaroid-stack {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-    }
-
-    .camera-img {
-      width: 200px;
-      margin-bottom: 20px;
-    }
-
-    .polaroid {
-      background: white;
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      border-radius: 10px;
-    }
-
-    .music-control {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    @keyframes beat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.3);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     @keyframes fadeIn {
@@ -164,55 +107,32 @@
   </style>
 </head>
 <body>
-  <div class="music-control">
-    <audio id="bg-music" controls loop>
-      <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
-      Browser kamu tidak mendukung audio player 😢
-    </audio>
+  <!-- Spotify Music Player -->
+  <div class="spotify-player">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 
-  <div class="container">
-    <h1>Hai, Sayang 💖</h1>
-    <div class="card">
-      <p>Aku cuma mau bilang...</p>
-      <p class="heart">❤️</p>
-      <p>Kamu itu luar biasa. Terima kasih udah jadi bagian dari hidupku.</p>
-      <p>Aku bikinin ini buat kamu, sebagai tanda kecil dari rasa sayangku 🥰</p>
-    </div>
+  <!-- Scroll text -->
+  <div class="scroll-text">Scroll ke bawah ya 💕</div>
 
-    <div class="card">
-      <p>Semoga kamu selalu bahagia ya!</p>
-      <p class="heart">💕</p>
-    </div>
+  <!-- Camera and Polaroid section -->
+  <div class="camera-section">
+    <img src="https://i.ibb.co/VLKTnL6/polaroid-camera.png" alt="Kamera Polaroid" class="camera-img" />
 
-    <div class="polaroid-stack">
-      <img src="asset/kamera.png" class="camera-img" alt="Camera">
-
-      <div class="polaroid">
-        <div class="hover-images-group">
-          <div class="card">
-          <div class="hover-images-group">
-            <div class="hover-image">
-              <img src="https://source.unsplash.com/200x250/?couple" alt="Couple Image 1" />
-              <div class="text">Kita berdua selamanya 💞</div>
-            </div>
-            <div class="hover-image">
-              <img src="https://source.unsplash.com/200x250/?together" alt="Couple Image 2" />
-              <div class="text">Selalu di sampingmu 💗</div>
-            </div>
-            <div class="hover-image">
-              <img src="https://source.unsplash.com/200x250/?love" alt="Couple Image 3" />
-              <div class="text">Kamu dan aku, selamanya 💑</div>
-            </div>
-            </div>
-          </div>
-        </div>
+    <div class="polaroid-card">
+      <div class="photo-frame">
+        <img src="https://source.unsplash.com/200x250/?couple" alt="Foto 1">
+        <div class="hover-text">Aku selalu bersyukur ada kamu ❤️</div>
+      </div>
+      <div class="photo-frame">
+        <img src="https://source.unsplash.com/200x250/?together" alt="Foto 2">
+        <div class="hover-text">Kebahagiaan itu kamu 🥰</div>
+      </div>
+      <div class="photo-frame">
+        <img src="https://source.unsplash.com/200x250/?romantic" alt="Foto 3">
+        <div class="hover-text">Selalu ingin bersamamu 💑</div>
       </div>
     </div>
   </div>
-
-  <footer>
-    Dibuat dengan cinta oleh [Nama Kamu] 💌
-  </footer>
 </body>
 </html>
