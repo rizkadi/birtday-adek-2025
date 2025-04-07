@@ -47,6 +47,49 @@
       animation: fadeInUp 1.5s ease;
     }
 
+    .hover-image {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      margin-top: 40px;
+      animation: fadeInUp 2s ease;
+    }
+
+    .hover-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+
+    .hover-image .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      color: #d63384;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .hover-image:hover img {
+      opacity: 0.2;
+    }
+
+    .hover-image:hover .text {
+      opacity: 1;
+    }
+
     footer {
       margin-top: 50px;
       font-size: 0.9em;
@@ -92,11 +135,18 @@
       <p>Kamu itu luar biasa. Terima kasih udah jadi bagian dari hidupku.</p>
       <p>Aku bikinin ini buat kamu, sebagai tanda kecil dari rasa sayangku 🥰</p>
     </div>
+
+    <div class="hover-image">
+      <img src="https://source.unsplash.com/300x300/?love,heart" alt="Love Image" />
+      <div class="text">Aku sayang kamu 💗</div>
+    </div>
+
     <div class="card">
       <p>Semoga kamu selalu bahagia ya!</p>
       <p class="heart">💕</p>
     </div>
   </div>
+
   <footer>
     Dibuat dengan cinta oleh [Nama Kamu] 💌
   </footer>
